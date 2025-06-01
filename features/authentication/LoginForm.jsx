@@ -13,10 +13,18 @@ function LoginForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    login({
-      email,
-      password,
-    });
+    login(
+      {
+        email,
+        password,
+      },
+      {
+        onError: () => {
+          setEmail("");
+          setPassword("");
+        },
+      }
+    );
   }
 
   return (
