@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getUser } from "../../services/apiAuth";
+import { getCurrentUser } from "../../services/apiAuth";
 
 export function useUser() {
   const {
@@ -8,7 +8,7 @@ export function useUser() {
     error,
   } = useQuery({
     queryKey: ["user"],
-    queryFn: getUser,
+    queryFn: getCurrentUser,
   });
 
   return {
