@@ -2,15 +2,42 @@
 
 ![Wild Oasis](/public/wild_oasis_demo.gif)
 
-One of the projects in Jonas Schmedtmann's Ultimate React Course. “The Wild Oasis” is a fictional small boutique hotel with 8
-luxurious wooden cabins. This is the internal application used inside the hotel to check in guests as they arrive.
+“The Wild Oasis” is a fictional boutique hotel featuring 8 luxurious wooden cabins. This internal application is used by staff to check in guests upon arrival.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![styled-components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
-![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
+- [React.js](https://react.dev/)
+- [React Query](https://tanstack.com/query/latest)
+- [React Hook Form](https://react-hook-form.com/)
+- [Styled Components](https://styled-components.com/)
+- [Supabase](https://supabase.com/)
+
+---
+
+## How to run project locally
+
+Clone the project
+
+```bash
+  git clone `https://github.com/jfsarmien2/fictional-wild-oasis.git`
+```
+
+Go to the project directory
+
+```bash
+  cd project dir
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
