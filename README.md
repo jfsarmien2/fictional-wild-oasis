@@ -1,6 +1,6 @@
 # Wild Oasis
 
-![Wild Oasis](/public/the-wild-oasis.png)
+![Wild Oasis](/public/wild_oasis_demo.gif)
 
 One of the projects in Jonas Schmedtmann's Ultimate React Course. “The Wild Oasis” is a fictional small boutique hotel with 8
 luxurious wooden cabins. This is the internal application used inside the hotel to check in guests as they arrive.
