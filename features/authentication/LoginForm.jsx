@@ -1,52 +1,62 @@
-import { useState } from "react";
 import Button from "../../ui/Button";
 import Form from "../../ui/Form";
 import Input from "../../ui/Input";
 import FormRowVertical from "../../ui/FormRowVertical";
 import SpinnerMini from "../../ui/SpinnerMini";
 import { useLogin } from "./useLogin";
+import { useForm } from "react-hook-form";
 
 function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { register, handleSubmit, reset, formState } = useForm({
+    defaultValues: {},
+  });
+  const { errors } = formState;
   const { login, isLoading } = useLogin();
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function onSubmit(data) {
     login(
       {
-        email,
-        password,
+        email: data?.email,
+        password: data?.password,
       },
       {
         onError: () => {
-          setEmail("");
-          setPassword("");
+          reset();
         },
       }
     );
   }
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <FormRowVertical label="Email address">
+    <Form onSubmit={handleSubmit(onSubmit)}>
+      <FormRowVertical label="Email address" error={errors?.email?.message}>
         <Input
           type="email"
           id="email"
           // This makes this form better for password managers
           autoComplete="username"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          {...register("email", {
+            required: "This field is required.",
+            pattern: {
+              value: /\S+@\S+\.\S+/,
+              message: "Please provide a valid email address",
+            },
+          })}
           disabled={isLoading}
         />
       </FormRowVertical>
-      <FormRowVertical label="Password">
+      <FormRowVertical label="Password" error={errors?.password?.message}>
         <Input
           type="password"
           id="password"
           autoComplete="current-password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          {...register("password", {
+            required: "This field is required.",
+            minLength: {
+              value: 8,
+              message: "Password must be a minimum of 8 characters.",
+            },
+          })}
           disabled={isLoading}
         />
       </FormRowVertical>
