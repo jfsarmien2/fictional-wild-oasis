@@ -16,6 +16,17 @@
 
 ---
 
+## What I Learned
+
+- Authentication and Authorization: Implementing Supabase to securely manage user roles (hotel employees).
+- Real-time Functionality: Leveraging Supabase's real-time features for dynamic data updates.
+- State Management and Data Fetching: Using React Query to efficiently manage the app's data flow.
+- Complex UI Patterns: Implementing reusable patterns like the Compound Component Pattern and Higher-Order Components (HOC) to create more maintainable and scalable code.
+- Dark Mode: Adding dark mode functionality for a personalized user experience.
+- Data Visualization: Using Recharts to create meaningful visual representations of hotel statistics.
+
+---
+
 ## How to run project locally
 
 Clone the project
@@ -41,3 +52,9 @@ Start the server
 ```bash
   npm run dev
 ```
+
+---
+
+## Acknowledgments
+
+This app was developed as part of the [Udemy course](https://www.udemy.com/course/the-ultimate-react-course/) by Jonas Schmedtmann. Special thanks to Jonas for his excellent teaching and guidance throughout the course.
